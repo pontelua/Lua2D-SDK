@@ -83,7 +83,7 @@ modify_layout(){
 # android.bat of android 4.0 don't create res/drawable-hdpi res/drawable-ldpi and res/drawable-mdpi.
 # remove it and fill with template resources.
 copy_icon(){
-    rm -rf $APP_DIR/proj.android/res
+    rm -rf $APP_DIR/proj.android/res/drawable*
     cp -rf $TEMPLATE_ROOT/res $APP_DIR/proj.android
 }
 
