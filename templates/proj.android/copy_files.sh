@@ -6,11 +6,10 @@ APP_NAME=$2
 PWD=$1
 APP_DIR=$PWD/$APP_NAME
 TEMPLATE_ROOT=$PWD/templates/proj.android
-NDK_ROOT=$3
-PACKAGE_PATH=$4
-NEED_BOX2D=$5
-NEED_CHIPMUNK=$6
-NEED_LUA=$7
+PACKAGE_PATH=$3
+NEED_BOX2D=$4
+NEED_CHIPMUNK=$5
+NEED_LUA=$6
 
 # xxx.yyy.zzz -> xxx/yyy/zzz
 convert_package_path_to_dir(){

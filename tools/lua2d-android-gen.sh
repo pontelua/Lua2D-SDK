@@ -5,18 +5,11 @@
 # Don't modify the script until you know what you do.
 
 # set environment paramters
-NDK_ROOT_LOCAL="/Users/chitacan/Documents/android-ndk-r7"
-ANDROID_SDK_ROOT_LOCAL="/Users/chitacan/Documents/android-sdk"
+ANDROID_SDK_ROOT_LOCAL=""
 
 NEED_BOX2D=false
 NEED_CHIPMUNK=false
 NEED_LUA=false
-
-# try to get global variable
-if [ $NDK_ROOT"aaa" != "aaa" ]; then
-    echo "use global definition of NDK_ROOT: $NDK_ROOT"
-    NDK_ROOT_LOCAL=$NDK_ROOT
-fi
 
 if [ $ANDROID_SDK_ROOT"aaa" != "aaa" ]; then
     echo "use global definition of ANDROID_SDK_ROOT: $ANDROID_SDK_ROOT"
@@ -127,9 +120,9 @@ create_android_project
 
 if [ $0 = "linux" ]; then
     # invoked by create-linux-android-project.sh
-    sh `pwd`/template/linux/mycopy_files.sh `pwd` $PROJECT_NAME $NDK_ROOT_LOCAL $PACKAGE_PATH $NEED_BOX2D $NEED_CHIPMUNK $NEED_LUA
+    sh `pwd`/template/linux/mycopy_files.sh `pwd` $PROJECT_NAME $PACKAGE_PATH $NEED_BOX2D $NEED_CHIPMUNK $NEED_LUA
 else
     # invoke template/android/copy_files.sh
-    sh `pwd`/templates/proj.android/copy_files.sh `pwd` $PROJECT_NAME $NDK_ROOT_LOCAL $PACKAGE_PATH $NEED_BOX2D $NEED_CHIPMUNK $NEED_LUA
+    sh `pwd`/templates/proj.android/copy_files.sh `pwd` $PROJECT_NAME $PACKAGE_PATH $NEED_BOX2D $NEED_CHIPMUNK $NEED_LUA
 fi
 
